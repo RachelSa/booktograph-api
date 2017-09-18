@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(version: 20170915213401) do
   end
 
   create_table "book_authors", force: :cascade do |t|
+    t.bigint "book_id"
+    t.bigint "author_id"
+    t.index ["author_id"], name: "index_book_authors_on_author_id"
+    t.index ["book_id"], name: "index_book_authors_on_book_id"
   end
 
   create_table "book_reads", force: :cascade do |t|
