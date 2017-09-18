@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do
-  Book.create(title: Faker::Book.title)
+10.times do |i|
+  Book.create(title: "Harry Potter #{i}")
 end
 
 10.times do
@@ -23,5 +23,13 @@ end
 end
 
 10.times do
-  Review.create(content: "writing my review here...", reaction: Random.rand(1..10), rating: Random.rand(1..10), chapter_id: Random.rand(1..10) )
+  Review.create(content: "writing my review here...", reaction: Random.rand(1..10), rating: Random.rand(1..10), chapter_id: Random.rand(1..10), user_id: Random.rand(1..10) )
+end
+
+10.times do |i|
+  BookAuthor.create(book_id: i, author_id: Random.rand(1..10))
+end
+
+10.times do |i|
+  BookRead.create(book_id: i, user_id: Random.rand(1..10))
 end

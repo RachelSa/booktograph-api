@@ -50,7 +50,9 @@ ActiveRecord::Schema.define(version: 20170915213401) do
     t.integer "reaction"
     t.integer "rating"
     t.bigint "chapter_id"
+    t.bigint "user_id"
     t.index ["chapter_id"], name: "index_reviews_on_chapter_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
