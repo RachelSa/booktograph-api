@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(version: 20170915213401) do
   end
 
   create_table "book_authors", force: :cascade do |t|
+    t.bigint "book_id"
+    t.bigint "author_id"
+    t.index ["author_id"], name: "index_book_authors_on_author_id"
+    t.index ["book_id"], name: "index_book_authors_on_book_id"
   end
 
   create_table "book_reads", force: :cascade do |t|
@@ -46,7 +50,9 @@ ActiveRecord::Schema.define(version: 20170915213401) do
     t.integer "reaction"
     t.integer "rating"
     t.bigint "chapter_id"
+    t.bigint "user_id"
     t.index ["chapter_id"], name: "index_reviews_on_chapter_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

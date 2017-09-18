@@ -5,6 +5,7 @@ class CreateReview < ActiveRecord::Migration[5.1]
       t.integer :reaction
       t.integer :rating
       t.references :chapter
+      t.references :user
     end
   end
 end

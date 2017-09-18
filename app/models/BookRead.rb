@@ -1,4 +1,0 @@
-class BookReader < ApplicationRecord
-
-
-end
