@@ -12,7 +12,7 @@ Deployed to Heroku.
   - [Users](https://booktograph-api.herokuapp.com/v1/users)
   
 ### ERD Diagram   
- [erd diagram](https://farm5.staticflickr.com/4348/36957270730_7acb161915_b.jpg)
+ ![erd diagram](https://farm5.staticflickr.com/4348/36957270730_7acb161915_b.jpg)
   
   
   
